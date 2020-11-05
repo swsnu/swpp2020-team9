@@ -4,9 +4,9 @@ matrix:
     node_js: '12'
     addons:
         sonarcloud:
-            organization: swsnu
+            organization: 'swsnu'
             token:
-                secure: TApxETqopcGBf6UnrMYyM4KNRWbwoRYlhfPOYaEYWHMiRR2pI0dDI2FZwkaW8flDvAWokFT+UaSrHxkqIy+2+G44MS331Z3YQlcEK568cvuInmcJC2IPapwSOH8wky3Jhs7DTbZ3vjQMXTf9bp97jIdtcIWULfxtsQM6NkHa3rGs74GkCo9xzq0441/MSnNaQdWxorI9dOseT2WDguItpVIIoO2N7Wk+91UduCP4WZP7czvk+1NRr5y4qlnF/BPtjzx0r+1z/ygIsV1jAPIYNfOiLMHoIyx26eMD79451N1oiw3Pw9+ShaIthVpaCZQcmghs1uKvcDh4JrFIqf0uX75iCInpcKI78lWOK5+K0qWQQZpxwkXgKH+vS1+QUVjmjIO4JMBABq5eY2S7TvMxc6NJ4LWcibkV0qtSA1g8JWCCqEhlwCcPumgbJcw8HGAmDnDqI5foqZFJrUP9oGdEK7AEQnFSQwYsL2PBCj6rKhY9yg7sVnY6+WUnEokqDVMJ0yzFiITnv1lkbRJ4fIUGSH+kJP/nqU0ygzv0lN8OTAHSjwqgpdBI3TxLxZ209ImvEL2EWghlu1sEl55dvmdMn2Ih+sO4oyuLD0+fBR9rCfQvN0NZ0STk94KTYvBDEU6R3E/vVf/uk3+XP6aPd/O79igg6mtkxkw+OypbjSAWuhE=
+                secure: 'TApxETqopcGBf6UnrMYyM4KNRWbwoRYlhfPOYaEYWHMiRR2pI0dDI2FZwkaW8flDvAWokFT+UaSrHxkqIy+2+G44MS331Z3YQlcEK568cvuInmcJC2IPapwSOH8wky3Jhs7DTbZ3vjQMXTf9bp97jIdtcIWULfxtsQM6NkHa3rGs74GkCo9xzq0441/MSnNaQdWxorI9dOseT2WDguItpVIIoO2N7Wk+91UduCP4WZP7czvk+1NRr5y4qlnF/BPtjzx0r+1z/ygIsV1jAPIYNfOiLMHoIyx26eMD79451N1oiw3Pw9+ShaIthVpaCZQcmghs1uKvcDh4JrFIqf0uX75iCInpcKI78lWOK5+K0qWQQZpxwkXgKH+vS1+QUVjmjIO4JMBABq5eY2S7TvMxc6NJ4LWcibkV0qtSA1g8JWCCqEhlwCcPumgbJcw8HGAmDnDqI5foqZFJrUP9oGdEK7AEQnFSQwYsL2PBCj6rKhY9yg7sVnY6+WUnEokqDVMJ0yzFiITnv1lkbRJ4fIUGSH+kJP/nqU0ygzv0lN8OTAHSjwqgpdBI3TxLxZ209ImvEL2EWghlu1sEl55dvmdMn2Ih+sO4oyuLD0+fBR9rCfQvN0NZ0STk94KTYvBDEU6R3E/vVf/uk3+XP6aPd/O79igg6mtkxkw+OypbjSAWuhE='
     cache:
     - yarn: true
     before_install:
