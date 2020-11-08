@@ -1,12 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { Provider } from "react-redux";
+import { history, store } from "./configure";
+
 import App from "./App";
+import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App history={history} />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
