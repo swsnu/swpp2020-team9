@@ -13,10 +13,14 @@ matrix:
     - cd frontend
     install:
     - yarn install
+    - yarn add coveralls
     script:
     - yarn lint
     - yarn test --coverage --watchAll=false
     - cd .. && sonar-scanner
+    after_success:
+    - cd frontend
+    - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   - language: python
     python: '3.8'
     addons:
@@ -30,8 +34,12 @@ matrix:
     - cd backend
     install:
     - pip install -r requirements.txt
+    - pip install coveralls
     script:
     - pylint **/*.py --load-plugins pylint_django
     - coverage run --source='.' manage.py test
     - coverage xml
     - cd .. && sonar-scanner
+    after_success:
+    - cd backend
+    - coveralls
