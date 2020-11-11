@@ -28,6 +28,28 @@
   color: #61dafb;
 }
 
+.Explore {
+  padding: 20px;
+}
+
+.CardBackgroundImage {
+  object-fit: cover;
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery-img {
+  object-fit: cover;
+  height: 700px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.View {
+  padding: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
