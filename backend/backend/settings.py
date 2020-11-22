@@ -30,9 +30,9 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Media custom setting
-#MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
 
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #print("base dir path", BASE_DIR)
 
@@ -40,6 +40,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'location.apps.LocationConfig',
+    'place.apps.PlaceConfig',
     'plan.apps.PlanConfig',
     'django.contrib.admin',
     'django.contrib.auth',

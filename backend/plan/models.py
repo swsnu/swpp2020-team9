@@ -15,9 +15,10 @@ class Plan(models.Model):
         related_name = 'destination_id',
         null = True,
     )
-    duration = models.TextField() 
+    duration = models.IntegerField(default=0)
+    #duration = models.DurationField(null=True, blank =True) 
     keywords = models.TextField()
     like_cnt = models.IntegerField(default=0)
-    gallery_thumbnail = models.ImageField(upload_to='')
+    gallery_thumbnail = models.ImageField(blank=True)
     #cover_img = models.ForeignKey()
 # Create your models here.
