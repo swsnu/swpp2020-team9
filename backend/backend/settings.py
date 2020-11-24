@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'location.apps.LocationConfig',
     'place.apps.PlaceConfig',
     'plan.apps.PlanConfig',
+    'reco_img.apps.RecoImgConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

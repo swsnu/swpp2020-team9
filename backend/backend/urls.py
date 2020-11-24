@@ -25,4 +25,5 @@ urlpatterns = [
     path('api/location/', include('location.urls')),
     path('api/plan/', include('plan.urls')),
     path('api/place/', include('place.urls')),
+    path('api/recoimg/', include('reco_img.urls')),
 ]   #static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),

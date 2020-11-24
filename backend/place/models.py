@@ -11,7 +11,7 @@ class Place(models.Model):
     latitude = models.FloatField(default=0)
     longitude = models.FloatField(default=0)
     name = models.CharField(max_length=63)
-    #rep_img = models.ImageField(blank=True)
+    rep_img = models.ImageField(blank=True)
 
 
 # Create your models here.

@@ -17,7 +17,8 @@ def plan(request):
         plan_keywords = body['keywords']
         plan_like_cnt = body['like_cnt']
         plan_gallery_thumbnail = body['gallery_thumbnalil']
-        plan = Plan(duration = plan_duration, keywords = plan_keywords, like_cnt = plan_like_cnt, gallery_thumbnail = plan_galllery_thumbnail)
+        plan_reco_img = body['reco_img']
+        plan = Plan(duration = plan_duration, keywords = plan_keywords, like_cnt = plan_like_cnt, gallery_thumbnail = plan_galllery_thumbnail, reco_img = plan_reco_img)
         plan.save()
         return HttpResponse(status=201)
     else:
@@ -26,7 +27,7 @@ def plan(request):
 def plan_id(request, id=0):
     if request.method == 'GET':
         plan = Plan.objects.get(id=id)
-        response_dict = {'duration' : plan.duration, 'keywords' : plan.keywords, 'like_cnt' : plan.like_cnt, 'gallery_thumbnail' : plan.gallery_thumbnail }
+        response_dict = {'duration' : plan.duration, 'keywords' : plan.keywords, 'like_cnt' : plan.like_cnt, 'gallery_thumbnail' : plan.gallery_thumbnail, 'reco_img': plan.reco_img }
         return JsonResponse(str(response_dict), safe=False)
     elif request.method == 'PUT':
         plan = Plan.objects.get(id=id)
@@ -35,6 +36,7 @@ def plan_id(request, id=0):
         plan.keywords = body['keywords']
         plan.like_cnt = body['like_cnt']
         plan.gallery_thumbnail = body['gallery_thumbnail']
+        plan.reco_img = body['reco_img']
         plan.save()
         response_dict = { 'name' : plan.name, 'latitude': plan.latitude, 'longitude' : plan.longitude }
         return JsonResponse(response_dict, status=200)

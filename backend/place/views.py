@@ -15,9 +15,8 @@ def place(request):
         place_name = body['name']
         place_latitude = body['latitude']
         place_longitude = body['longitude']
-        #place_rep_img = request.FILES['rep_img']
-        place = Place(name = place_name, latitude = place_latitude, longitude = place_longitude)
-                #rep_img = place_rep_img)
+        place_rep_img = bpdy['rep_img']
+        place = Place(name = place_name, latitude = place_latitude, longitude = place_longitude, rep_img = place_rep_img)
         place.save()
         return HttpResponse(status = 201)
     else:
@@ -26,8 +25,8 @@ def place(request):
 def place_id(request, id=0):
     if request.method == 'GET':
         place = Place.objects.get(id=id)
-        response_dict = { 'name' : place.name, 'latitude' : place.latitude, 'longitude' : place.longitude }
-        return JsonResponse(response_dict, status=201)
+        response_dict = { 'name' : place.name, 'latitude' : place.latitude, 'longitude' : place.longitude, 'rep_img' : place.rep_img }
+        return JsonResponse(str(response_dict), status=201, safe=False)
     elif request.method == 'PUT':
         place = Place.objects.get(id=id)
         body = json.loads(request.body.decode())
